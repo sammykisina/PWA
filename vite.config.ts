@@ -11,7 +11,7 @@ const manifestForPlugin: Partial<VitePWAOptions> = {
     description: 'An app that can show weather',
     icons: [
       {
-        src: '/images/logo.png',
+        src: '/logo.png',
         sizes: '1024x1024',
         type: 'image/png',
         purpose: 'any maskable',
