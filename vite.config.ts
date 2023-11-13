@@ -29,7 +29,7 @@ const manifestForPlugin: Partial<VitePWAOptions> = {
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react(), VitePWA({ manifest: manifestForPlugin })],
+  plugins: [react(), VitePWA(manifestForPlugin)],
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
