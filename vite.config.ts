@@ -31,9 +31,7 @@ const manifestForPlugin: Partial<VitePWAOptions> = {
 export default defineConfig({
   plugins: [
     react(),
-    VitePWA({
-      manifest: manifestForPlugin,
-    }),
+    VitePWA({ registerType: 'autoUpdate', manifest: manifestForPlugin }),
   ],
   resolve: {
     alias: {
