@@ -5,7 +5,7 @@ import path from 'path';
 
 const manifestForPlugin: Partial<VitePWAOptions> = {
   registerType: 'prompt',
-  includeAssets: ['logo.png', 'vite.svg'],
+  includeAssets: ['logo.png', 'vite.svg', '192x192.png', '512x512.png'],
   manifest: {
     name: 'Weather Ups',
     short_name: 'Weather Ups',
