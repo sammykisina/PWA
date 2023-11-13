@@ -17,6 +17,11 @@ const manifestForPlugin: Partial<VitePWAOptions> = {
         type: 'image/png',
       },
       {
+        src: '/512x512.png',
+        sizes: '512x512',
+        type: 'image/png',
+      },
+      {
         src: '/logo.png',
         sizes: '1024x1024',
         type: 'image/png',
