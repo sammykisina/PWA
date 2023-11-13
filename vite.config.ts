@@ -12,6 +12,11 @@ const manifestForPlugin: Partial<VitePWAOptions> = {
     description: 'An app that can show weather',
     icons: [
       {
+        src: '/192x192.png',
+        sizes: '192x192',
+        type: 'image/png',
+      },
+      {
         src: '/logo.png',
         sizes: '1024x1024',
         type: 'image/png',
@@ -55,10 +60,4 @@ export default defineConfig({
       '@': path.resolve(__dirname, './src'),
     },
   },
-  // build: {
-  //   outDir: './build',
-  //   assetsDir: './assets',
-  //   minify: true,
-  //   sourcemap: false,
-  // },
 });
