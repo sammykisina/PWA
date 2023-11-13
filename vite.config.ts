@@ -55,10 +55,10 @@ export default defineConfig({
       '@': path.resolve(__dirname, './src'),
     },
   },
-  build: {
-    outDir: './build',
-    assetsDir: './assets',
-    minify: true,
-    sourcemap: false,
-  },
+  // build: {
+  //   outDir: './build',
+  //   assetsDir: './assets',
+  //   minify: true,
+  //   sourcemap: false,
+  // },
 });
