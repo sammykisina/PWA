@@ -25,14 +25,25 @@ const manifestForPlugin: Partial<VitePWAOptions> = {
     start_url: '/',
     orientation: 'portrait',
   },
+  devOptions: { enabled: true },
+  workbox: {
+    cleanupOutdatedCaches: true,
+    runtimeCaching: [
+      {
+        urlPattern: ({ url }) => url.pathname.startsWith('/api'),
+        handler: 'NetworkFirst',
+        options: {
+          cacheName: 'api-cache',
+          cacheableResponse: { statuses: [0, 200] },
+        },
+      },
+    ],
+  },
 };
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [
-    react(),
-    VitePWA({ registerType: 'autoUpdate', manifest: manifestForPlugin }),
-  ],
+  plugins: [react(), VitePWA(manifestForPlugin)],
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
